@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    color: black;
+    background-color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.phView-heading {
+    display: none;
+}
+
+#circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 15px;
+    background-color: blue;
+}
+
+#rectangle {
+    height: 20px;
+    width: 80px;
+    margin: 20px 10px 10px 0px;
+    background-color: black;
+}
+
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(233, 246, 243);
+    box-shadow: 1px 1px 8px rgb(89, 88, 88);
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#about {
+    color: blue;
+}
+
+.first {
+    display: flex;
+}
+
+#dl {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border: transparent;
+    background-color: rgb(109, 52, 216);
+}
+
+a {
+    color: black;
+}
+
+.whole {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+.whole a {
+    text-decoration: none;
+}
+
+.c1 {
+    margin: 20px;
+    width: 100%;
+}
+
+#learnMore {
+    text-decoration: underline;
+}
+
+.c2 {
+    margin: 70px 50px;
+    width: 400px;
+    height: 200px;
+}
+
+.whole2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+#pic1 {
+    margin: 50px;
+}
+
+.toggle-btn {
+    appearance: none;
+    width: 70px;
+    height: 35px;
+    outline: none;
+    border-radius: 50px;
+    background-color: rgb(127, 122, 122);
+    position: relative;
+    box-shadow: 2px 4px 5px rgb(29, 28, 28);
+    top: 1px;
+    left: 5px;
+    margin-right: 10px;
+}
+
+.toggle-btn::before {
+    content: "";
+    background-color: rgb(66, 62, 62);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    border-radius: 50px;
+    transition: .4s;
+}
+
+.toggle-btn:checked {
+    background-color: rgb(196, 205, 234);
+}
+
+.toggle-btn:checked::before {
+    transform: translate(120%);
+    content: '';
+    background-color: rgb(232, 235, 224);
+
+}
+
+.darkMode {
+    background-color: rgb(16, 16, 16);
+    color: rgb(246, 239, 239);
+}
+
+.darkMode #nav {
+    background-color: rgb(45, 47, 48);
+    color: black;
+    border: none;
+}
+
+.darkMode #circle {
+    background-color: hotpink;
+}
+
+.darkMode #rectangle {
+    background-color: white;
+}
+
+.darkMode #dl {
+    background-color: hotpink;
+}
+
+.darkMode a {
+    color: white;
+}
+
+.darkMode #about {
+    color: hotpink;
+}
+
+img {
+    margin-top: 70px;
+    height: 250px;
+    width: 350px;
+    margin: 20px;
+}
+
+.secDiv {
+    display: none;
+}
+
+@media only screen and (max-width:480px) {
+    * {
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    body {
+        color: black;
+        background-color: white;
+    }
+
+    .phView-heading {
+        display: flex;
+        justify-content: center;
+    }
+
+    .toggle-btn {
+        position: sticky;
+        top: 0px;
+        left: 20px;
+    }
+
+    #circle {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin: 15px;
+        background-color: blue;
+    }
+
+    #rectangle {
+        height: 20px;
+        width: 80px;
+        margin: 20px 10px 10px 0px;
+        background-color: black;
+    }
+
+    #hamburg {
+        font-size: 35px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .darkMode #hamburg {
+        color: white;
+    }
+
+    .hide {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        color: yellow;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        width: 10px;
+    }
+
+    .secDiv {
+        position: relative;
+        top: 0px;
+        left: 10px;
+        display: block;
+        color: rgb(255, 255, 255);
+    }
+
+    span {
+        color: rgb(78, 168, 242);
+    }
+
+    li #about {
+        color: rgb(151, 2, 2);
+    }
+
+    .darkMode .hide {
+        background-color: rgb(16, 16, 16);
+    }
+
+    .darkMode .secDiv {
+        color: rgb(16, 16, 16);
+        background-color: rgb(16, 16, 16);
+    }
+
+    .darkMode li #about {
+        color: rgb(246, 73, 168);
+    }
+
+    .darkMode span {
+        color: gold;
+    }
+
+    .phView-ul li a {
+        display: flex;
+        color: yellow;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    li {
+        list-style-type: none;
+        margin: 10px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    #about {
+        color: blue;
+    }
+
+    .first {
+        display: flex;
+    }
+
+    #dl {
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+        border: transparent;
+        box-sizing: border-box;
+        max-width: max-content;
+        border-radius: 10px;
+        background-color: rgb(109, 52, 216);
+    }
+
+    a {
+        color: black;
+    }
+
+    .whole {
+        display: none;
+        justify-content: space-between;
+        margin: 0 5%;
+        flex-direction: column-reverse;
+    }
+
+    .c1,
+    .c2 {
+        margin: 20px;
+        width: 800px;
+    }
+
+    #heading {
+        width: 30%;
+    }
+
+    .whole2 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin: 0 3%;
+    }
+
+    #pic2 {
+        margin: 5px;
+        height: 200px;
+        width: 260px;
+    }
+
+    p {
+        width: 30%;
+    }
+
+    .toggle-btn {
+        appearance: none;
+        width: 70px;
+        height: 35px;
+        outline: none;
+        border-radius: 50px;
+        background-color: rgb(127, 122, 122);
+        position: relative;
+        box-shadow: 2px 4px 5px rgb(29, 28, 28);
+        top: 1px;
+        left: 5px;
+        margin-right: 10px;
+    }
+
+    .toggle-btn::before {
+        content: "";
+        background-color: rgb(66, 62, 62);
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 2px;
+        bottom: 0;
+        border-radius: 50px;
+        transition: .4s;
+    }
+
+    .toggle-btn:checked {
+        background-color: rgb(196, 205, 234);
+    }
+
+    .toggle-btn:checked::before {
+        transform: translate(120%);
+        content: '';
+        background-color: rgb(232, 235, 224);
+    }
+
+    .darkMode {
+        background-color: rgb(16, 16, 16);
+        color: rgb(246, 239, 239);
+    }
+
+    .darkMode #nav {
+        background-color: rgb(45, 47, 48);
+        color: black;
+        border: none;
+    }
+
+    .darkMode #circle {
+        background-color: hotpink;
+    }
+
+    .darkMode #rectangle {
+        background-color: white;
+    }
+
+    .darkMode #dl {
+        background-color: hotpink;
+    }
+
+    .darkMode a {
+        color: white;
+    }
+
+    .darkMode #about {
+        color: hotpink;
+    }
+
+    img {
+        margin-top: 70px;
+        height: 120px;
+        width: 80px;
+    }
+}
